@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan & Minuman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Menu Restoran</h1>
+        
+        <form id="orderForm">
+            <label for="menu">Pilih Menu:</label>
+            <select id="menu">
+                <option value="15000">Nasi Goreng - Rp 15.000</option>
+                <option value="20000">Ayam Bakar - Rp 20.000</option>
+                <option value="12000">Mie Goreng - Rp 12.000</option>
+                <option value="5000">Es Teh Manis - Rp 5.000</option>
+                <option value="6000">Es Jeruk - Rp 6.000</option>
+            </select>
+
+            <label for="jumlah">Jumlah Porsi/Gelas:</label>
+            <input type="number" id="jumlah" min="1" value="1" required>
+
+            <button type="button" onclick="tambahPesanan()">Tambah Pesanan</button>
+        </form>
+
+        <h2>Daftar Pesanan</h2>
+        <ul id="daftarPesanan"></ul>
+        
+        <div class="total-box">
+            Total Bayar: <span id="totalBayar">Rp 0</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
